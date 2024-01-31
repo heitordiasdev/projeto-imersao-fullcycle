@@ -71,4 +71,3 @@ func (wph *WebProductHandler) CreateProduct(w http.ResponseWriter, r *http.Reque
 }
 
 
-
