@@ -9,7 +9,7 @@ type ProductService struct {
 	ProductDB database.ProductDB
 }
 
-func NewProductService (productDB database.ProductDB) *ProductService {
+func NewProductService(productDB database.ProductDB) *ProductService {
 	return &ProductService{ProductDB: productDB}
 }
 
@@ -23,7 +23,7 @@ func (ps *ProductService) GetProducts() ([]*entity.Product, error) {
 
 func (ps *ProductService) GetProduct(id string) (*entity.Product, error) {
 	product, err := ps.ProductDB.GetProduct(id)
-	if err != nil{
+	if err != nil {
 		return nil, err
 	}
 	return product, nil
